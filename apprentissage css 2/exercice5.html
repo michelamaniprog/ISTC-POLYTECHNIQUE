@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML4.01 Transitional//EN"
+"http://www.w3c.org/TR/html4/loose.dtd">
+<html>
+     <head>
+         <meta http-equiv="content-Style-Type" content="text/css">
+        <title>formulaire</title>
+        <style type="text/css" media="screen">
+	input,  textarea, select{
+                            font: 12px verdana, arial, helvetica, sans serif ;
+                            bacKground: #ff9;
+                            text-indent:5px;
+                            border-bottom: thin solid #009;
+                            boder-left: thin solid #009;
+                             }
+                   input:focus, select:focus, textarea:focus{outline:4px solid green;}
+                  input:active, select:active, textarea:focus{outline:3px solid orange;}
+                  option.special{background:olive;}
+        </style>
+     </head>
+     <body>
+        	<form>
+                        Civilité : <input type="radio" name="civ" value="madame"> Madame
+                                        <input type="radio" name="civ" value="monsieur"> Monsieur 
+                                         <input type="radio" name="civ" value="Mademoiselle"> Mademoiselle<br>
+                        Nom : <input type="text" name="nom" maxlength="2"><br>
+                        Age : <select name="age">
+                                         <option selected="selected">Âge</option>
+                                         <option value="20 ans" class="special">20 ans</option>
+                                         <option value="21 ans">21 ans</option>
+                                         <option value="22 ans" class="special">22 ans</option>
+                                         <option value="23 ans">23 ans</option>
+                                         <option value="24 ans" class="special">24 ans</option>
+                                         <option value="25 ans">25 ans</option>
+                                         <option value="26 ans" class="special">26 ans</option>
+	                 </select><br> 
+	      Cible: <input type="checkbox" name="cible" value="étudiant"> Etudiant <br>
+                                    <input type="checkbox" name="cible" value="professeur"> Professeur<br>
+	      Questions: <textarea cols="50" rows="10">Posez une question</textarea><br>
+                       <input type="reset" value=" Annuler "><input type="submit" value=" Envoyer ">
+                                          
+     </body>
+</html>

@@ -1,0 +1,35 @@
+#BarreMenu{
+                         font: 12px verdana, arial, helvetica, sans-serif;
+                         list-style-type:none;
+                         }
+#BarreMenu li{
+                           display:inline;
+                           }
+#BarreMenu a:link, #BarreMenu a:visited{
+                            text-decoration:none;
+                            width:100px;
+	          margin: 0 5px;
+	          padding: 3px;
+	          border-right:3px solid #009;
+	          border-bottom:3px solid #009;
+	          border-top:3px solid #fff;
+	          border-left:3px solid #fff;
+	          background-color:#ff9;
+                             }
+#BarreMenu a:hover{
+                            text-decoration:none;
+                            width:100px;
+	          margin: 0 5px;
+	          padding: 3px;
+	          border-right:3px solid #fff;
+	          border-bottom:3px solid #fff;
+	          border-top:3px solid #009;
+	          border-left:3px solid #009;
+	          background-color:#fc0;
+                            color:#900;
+                             }
+#BarreMenu a:active{
+                              color:#900;
+                              background-color: #f60;
+                              border:3px solid #00f;
+                             }
