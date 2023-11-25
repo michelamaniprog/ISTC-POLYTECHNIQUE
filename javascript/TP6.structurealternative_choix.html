@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> programmation</title>
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
+
+<body>
+	<h2>Structure alternative de choix </h2>
+		<script type="text/javascript">
+			a=prompt("Entrez un nombre entier naturel");
+			b=prompt("Entrez un autre nombre entier naturel");
+			c=prompt("Entrez un operateur : X, / , % , + , -");
+			
+			switch(c){
+				case 'X' : r =a*b;
+					document.write("le produit de " + a + "par " + b + " est " + r);
+					break;
+				case '/' : r =a/b;
+					document.write("le quotien  de la division de " + a + "par " + b + " est " + r);
+					break;
+				case '%' : r =a%b;
+					document.write("le reste de la division de " + a + "par " + b + " est " + r);
+					break;
+				case '+' : r =a+b;
+					document.write("la somme de " + a + " par " + b + " est " + r);
+					break;
+				case '-' : r =a-b;
+					document.write("la difference entre " + a + "par " + b + " est " + r);
+					break;
+					
+				default : document.write("entre un opérateur parmi  : X, / , % , + , -")
+					
+			}
+		</script>
+</body>
+</html>

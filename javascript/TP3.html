@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/ javascript " />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<title> DHTML TP3</title>
+		<link rel="icon" href="images/logoreduit.gif" type="image/gif">
+		<script type="text/javascript">
+		function bgChangeImg(image){
+		document.body.style.backgroundImage=image;
+		}
+		 </script>
+		<style>
+		div {
+		 float:left;
+		 width:15px;
+		height:20px;
+		 border:solid thin #fff;
+		 cursor:pointer;
+		}
+			#boite {
+		position:absolute;
+		top:10px;
+		left:140px;
+		width: 80%;
+		 height:500px;
+		border:solid 1px #f00;
+		 background: #fff; 
+		 opacity:0.8; 
+		 filter:alpha(opacity=80); /* For IE8 and earlier */
+		}
+		</style>
+	</head>
+	<body style="background-repeat:no-repeat; background-size:cover"> 
+	<div onmouseover="bgChangeImg('url(images/ar-plan45.jpg)')">
+	<img src="images/ar-plan45.jpg" width="15" height="20" /></div>
+	<div onmouseover="bgChangeImg('url(images/ar-plan13.jpg)')">
+	<img src="images/ar-plan13.jpg" width="15" height="20" /></div>
+	<div onmouseover="bgChangeImg('url(images/ar-plan24.jpg)')">
+	<img src="images/ar-plan24.jpg" width="15" height="20" /></div>
+	<div onmouseover="bgChangeImg('url(images/ar-plan49.jpg)')">
+	<img src="images/ar-plan49.jpg" width="15" height="20" /></div>
+	<div id="boite"></div>
+	</body>
+
+</html>

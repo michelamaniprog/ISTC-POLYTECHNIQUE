@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Evenements</title>
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<script >
+		function valider(){
+			if(document.forum.civ[0].checked==false && 
+			   document.forum.civ[1].checked==false  &&
+			  document.forum.civ[2].checked==false){
+				window.alert("veuillez selectionner votre civilité SVP !");
+				document.forum.civ[0].focus();
+				return false;
+			}
+			
+			if(document.forum.nom.value==""){
+				window.alert("veuillez selectionner votre nom SVP !");
+				document.forum.nom.focus();
+				return false;
+			}
+			
+			if(document.forum.age.selectedIndex==0){
+				window.alert("veuillez selectionner votre âge SVP !");
+				document.forum.age.focus();
+				return false;
+			}
+		}
+	</script>
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<style type="text/css">
+		input:focus,
+		select
+		{
+			outline: 1px solid red; 
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Evenements </h2>
+			<form action="#"  name="forum">
+				<label for="Civilité">Civilité : </label> 
+				<input type="radio" name="civ"  value="Madame">Madame
+				<input type="radio" name="civ"  value="Monsieur">Monsieur
+				<input type="radio" name="civ"  value="Monsieur">Mademoiselle<br>
+				<input type="text" name="nom" size="60" placeholder="votre nom"> <br>
+				<select name="age">
+					<option selected="selected"></option>
+					<option value="20 ans">20 ans</option>
+					<option value="21 ans">21 ans</option>
+					<option value="22 ans">22 ans</option>
+					<option value="23 ans">23 ans</option>
+				</select><br>
+				<button onClick="return valider();">Envoyer</button>
+	</form>
+				
+</body>
+</html>
