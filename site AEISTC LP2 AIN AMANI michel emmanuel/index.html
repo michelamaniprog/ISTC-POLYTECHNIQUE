@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AEISTC (accueil) </title>
+<link rel="stylesheet" href="style.css">
+<link rel="short icon" href="img/logo.jpg">
+
+<meta http-equiv="Content-Script-Type">
+<meta http-equiv="Content-style-Type">
+<style>
+		nav ul li a.accueil{
+			background-color: #d50025;
+			border-bottom: 3px solid#d50025;
+		}
+		a:focus{
+			background-color: #d50025;
+		}
+	</style>
+</head>
+
+<body oncontextmenu="return false;">
+	<div class="container">
+	<header>
+		<div class="box-bg_img">
+		<div class="change_bg-img-2" id="bg1"></div>
+		<div class="change_bg-img-1" id="bg2"></div>
+		</div>
+		<div class="bannier">
+			<div class="logo"></div>
+			<div id="boiteSlide">
+				<ul id="slide">
+					<li><img src="img/DG.png" width="1279" height="200" alt="dg" /></li>
+					<li><img src="img/nouv/président0.png" width="1279" height="200" alt="pr" /></li>
+					<li><img src="img/nouv/foot0.png" width="1279" height="200" alt="foot" /></li>
+				</ul>
+			</div>
+		</div>
+		
+	
+	</header>
+		<nav>
+            <ul id="BarreDeNavigation" class="barreNav">
+               <li><a href="# " class="accueil">Accueil</a></li>
+               <li><a href="forum.html">Forum</a></li>
+               <li><a href="https://www.istcpolytechnique.ci/" target="_blank">ISTC</a></li>
+            </ul>
+		</nav>
+		<div class="box-info">
+			<div class="text-info">infos :</div>
+			<div class="mooving-text_info">
+				<marquee direction="left" class="marquee" scrollamount="1" truespeed="truespeed" behavior="scroll" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()"> 
+					la JIG(Journée de l'Infographiste) se tiendra le 22 fevrier 2023 a l'anphitheatre affoussiata bamba lamine
+				</marquee>  
+			</div>
+		</div>
+	<main>
+		<aside class="boite_gauche">
+			<div class="box-date_hour">
+				<div class="date">date
+					<p id="date-courrante"></p>
+				</div>
+				<div class="hour">heure
+					<p id="heure-courante" onload="afficherHeure()"></p>
+				</div>
+			</div>
+			<ul>
+				<li class="bloc1"><a href="#ancre_pr"> <img src="img/user-tie-solid.svg" class="icon" alt="presidente" width="20"> Président</a></li>
+                <li class="bloc2"><a href="#ancre_bu"><img src="img/people-group-solid.svg" class="icon" alt="bureau icon" width="20"> Presentation</a></li>
+				<li class="bloc3"><a href="#ancre_ac"><img src="img/message.svg" alt="activité" class="icon"  width="20"> Activités</a></li>
+			</ul>
+		</aside>
+	
+		<section class="section">
+			<article class="article1">
+				 <iframe name="clickéty" width="100%" height="460px"></iframe><br>
+	             <div class="boite-liensframe">           
+					  <!-- <a  class="liensFrame" href="index.html" target="clickéty" actived>   Home  </a> -->
+					  <a  class="liensFrame" href="img/nouv/président.png" target="clickéty" id="focusmeplease">  Home </a>
+					  <a  class="liensFrame" href="video/istc_entreprise.mp4" target="clickéty" id="prd">  Président </a>
+					  <a  class="liensFrame" href="bureau.html" target="clickéty"> Presentation   </a>
+					  <a class="liensFrame"  href="activite.html" target="clickéty">Activités</a>
+				</div>
+			</article>
+			<br id="ancre_pr"><br>
+			<h2>President</h2><br>
+			<article class="article2">
+				<!-- <img src="img/president2.png" width="250" height="300px" alt="pr image"><br>
+			  <div class="descripr">
+	            <h2 class="specialpr">P<sup>r</sup> Phillipe Akoua <br></h2>
+				<p class="d" >Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+				</div>
+              	<br><br> -->
+				<video src="video/istc_entreprise.mp4">
+					
+				</video>
+			</article>
+			<article class="article3">
+				<h2 id="ancre_bu">Presentation</h2><br>
+                        <!-- <table width="90%" cellspacing="0" cellpadding="10">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Nom et prenoms</th>
+                              <th scope="col">Fonction</th>
+                            </tr>
+                            <tr>
+                              <td>Gondo Nanoque</td>
+                              <td>Premier Vice président</td>
+                            </tr>
+                            <tr>
+                              <td>Boté Jean Jaurès</td>
+                              <td>Deuxième vice président </td>
+                            </tr>
+                            <tr>
+                              <td>Goli Lois </td>
+                              <td>Secrétaire général</td>
+                            </tr>
+                            <tr>
+                              <td>Obame Yannis </td>
+                              <td>Trésorière générale</td>
+                            </tr>
+							  <tr>
+                              <td>Soro Estelle</td>
+                              <td>Adjoint Trésorière générale</td>
+                            </tr>
+							  <tr>
+                              <td>Cissé Aminata </td>
+                              <td>Commissaire au compte</td>
+                            </tr>
+							  <tr>
+                              <td>Bakayoko Moustapha</td>
+                              <td>Adjoint Commissaire au compte</td>
+                            </tr>
+							  <tr>
+                              <td>Kakou Dolorès</td>
+                              <td>Secrétaire chargé à la communication</td>
+                            </tr>
+							  							  <tr>
+                              <td>Goza Amani</td>
+                              <td>Adjoint Secrétaire chargé à la communication</td>
+                            </tr>
+							  <tr>
+                              <td>Obame Yannis </td>
+                              <td>Secrétaire chargé à la vie estudiantine du social et des étrangers </td>
+                            </tr>
+							    <tr>
+                              <td>Kouao Emmanuel</td>
+                              <td>Adjoint</td>
+                            </tr>
+							  <tr>
+                              <td>Ouattara Zalika</td>
+                              <td>Secrétariat chargé aux relations extérieures</td>
+                            </tr>
+							  
+                          </tbody>
+                        </table> -->
+
+						<audio controls="controls">
+							<source src="audio/presentat.mp3" type="audio/mp3">
+						  </audio>
+						<p>&nbsp;</p>
+                        <br>
+			</article>
+			<article class="article4">
+				<h2 id="ancre_ac" style="padding: 20px;">Activités</h2>
+				<div class="boite-fond">
+                          <div class="boite_fondu">
+                            <a href="#">
+                               <img src="img/nouv/foot.png" class="imgfondu " id="imgfondu1" alt="foot">
+                            </a>
+                            <a href="">
+                              <img src="img/nouv/missain.png" class="imgfondu" id="imgfondu2" alt="miss"></a> 
+                            <a href="">
+                              <img src="img/nouv/tournoi.png" class="imgfondu" id="imgfondu3" alt="tournoi"></a> 
+                          </div>	
+				</div>
+			</article>
+		</section>
+	</main>
+	<footer class="silver">
+		<div class="nomwebmas">Webmaster Amani Michel</div> <hr>
+		<details>
+			<summary></summary>
+
+			<div class="about">
+				<div class="contener">
+					<img src="img/pp.jpg" alt="photo" class="principalimg">
+					
+					<div class="me">
+						<h1>Michel</h1>
+						<h1 class="bold">AMANI</h1>
+						<p class="slogan">“Curieux”</p>
+					</div>
+		
+					<div class="adresses">
+						<h3><a href="tel:[+225]0545475763" class="add_link"> +225 05 45 47 57 63</a> <img src="img/phone.png" alt="téléphone"></h3>
+						<h3><a href="https://accounts.google.com/signin/v2/challenge" class="add_link">Abidjan, cocody</a> <img src="img/GPS.png" alt="lieu"></h3>
+						<h3><a href="mailto:michelamani@gmail.com" class="add_link"> michelamaniprogm@gmail.com </a> <img src="img/email.png" alt="email"></h3>
+						<h3><a href="https://www.linkedin.com/" class="add_link">Michel Amani </a><img src="img/inlinked.png" alt="réseau"></h3>
+					</div>
+				</div>
+	
+				<h3 class="passion">Etudiant en communication, passionné du numérique. Je me forme en autodidacte au développement web depuis 2016.</h3>
+			</div>
+	
+	
+			<!-- debut section compétences -->
+			<section class="section-cv">
+				<h2>COMPETENCES</h2>
+				<div class="contenercomp">
+					<ul class="case1">
+						<li>Capacité d’analyse</li>
+						<li>Aptitudes à communiquer à l’oral et à l’écrit </li>
+						<li>Travail en équipe</li>
+					</ul>
+
+				</div>
+			</section>
+
+
+			<section class="section-cv">
+				<h2>LOGICIELS</h2>
+				<div class="contenercomp">
+					<div class="case3">
+						<ol class="int">
+							<li class="gras">Bureautique</li>
+							<ul >
+							<li> Excel</li>
+							<li> Powerpoint </li>
+							<li> Ms Project </li>
+							<li> Word</li>
+							</ul>
+							<li class="gras">PAO / MOTION</li>
+							<ul >
+							<li> Adobe Photoshop </li>
+							<li> Adobe Illustrator </li>
+							<li> Powerpoint </li>
+							<li> Adobe After effect </li>
+							<li> Adobe Premiere pro </li>
+							</ul>
+							<li class="gras">WEB</li>
+							<ul>
+							<li> Dreamweaver </li>
+							<li> Adobe Animate </li>
+							<li> Visual-code </li>
+							</ul>
+						</ol>
+					</div>
+				</div>
+			</section>
+	
+	
+			<!-- Debut section Formation et diplomes. -->
+			<section class="section-cv">
+				<h2>FORMATION ET CERTIFICATS </h2>
+				<ul class="forma">
+					<li>Formation Cisco (théorique) introduction à la cybersécurité [2021] </li> 
+					<li> Formation Alphorm PHP et MySQL [2020] </li>
+					<li>Formation pirple.com html5 et Css3 [2021] </li> 
+					<li>Licence en Sciences de la communication [2018] </li> 
+					<li> Baccalauréat A2 [2015]. </li>
+				</ul>
+	
+			</section>
+	
+	
+			<!-- debut section expérience pro -->
+			<section class="section-cv">
+				<h2>EXPERIENCE PROFESIONNELLE </h2>
+	
+				<h3 class="date0">Février 2018-2020 : Community Manager du Club Etudiants pour 
+								l’UNESCO de l’université de Bouaké</h3>
+								<ul class="expre">
+									<li>Animation, publication et conception, Veille informationnelle, Formateur des 
+										membres du bureau à la maitrise de l’outil informatique (ordinateur). </li>
+								</ul>
+			   <h3 class="date1">Avril 2016 – 2018 : Gestionnaire de cybercafé kami (Yamoussoukro)</h3>
+								<ul class="exp">
+									<li>Traitement de texte, Elaboration de devis avec Excel, Installation et mise en 
+										place réseau Pancafé, Recherche et navigation. </li>
+								</ul>
+			</section>
+	
+	
+			<!-- debut section centre d'interets -->
+			<section class="section-cv">
+				<h2>CENTRES D’INTÉRÊT </h2>
+					<ul class="int">
+						<li> Lecture </li>
+						<li> Recherche </li>
+						<li> Jeux video </li>
+						<li> Concours de programmation</li>
+					</ul>
+			</section>
+
+
+			<!-- debut section langues -->
+			<section class="section-cv">
+				<h2>Langues </h2>		
+					<div class="case2">
+	
+						<div class="flex1">
+							<h3>Français</h3>
+							 <span>80%</span>
+						</div>
+						<div class="bar1">
+						</div>
+	
+						<div class="flex2">
+							<h3>Anglais</h3>
+							<span>60%</span>
+						</div>
+						<div class="bar2"></div>
+					</div>
+			</section>
+	
+	
+			<!-- debut section centre d'interets -->
+			 <section class="section-cv">
+				<h2>REFERENCES</h2>
+					<ul class="ref">
+					  <li>Président Club UNESCO Bouaké : M. Goulei Yves .L; 07 49 30 41 09 </li>
+					  <li>Patron cyber-Kami: M. Amani Brou; 07 07 72 29 19 </li>
+					</ul>
+			</section>
+	
+			<div class="pied-cv_pdf">
+				<a href="CV.pdf" target="">Téléchager mon CV</a>
+			</div>
+			
+		</details>
+	</footer>
+</div>
+
+
+	<script type="text/javascript">
+
+		
+		//focus
+		// document.getElementById('focusmeplease').focus();
+
+		//HEURE
+        function heure() {
+            var date = new Date(),
+                hours = date.getHours(),
+                minutes = date.getMinutes(),
+                seconds = date.getSeconds();
+
+
+			// 	tm = ((hours < 10)? "0" : "")+hours+ ":";
+			// 	tm += ((minutes < 10)? "0" : "")+minutes+ ":";
+			// 	tm += ((seconds < 10)? "0" : "")+seconds;
+
+            if (hours < 10) {
+            hours = "0" + hours;
+            }
+            if (minutes < 10) {
+            minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+            seconds = "0" + seconds;
+            }
+
+            document.getElementById("heure-courante").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        setInterval(heure, 1000);
+
+
+		// function afficherHeure(){
+		// 	var dte = new Date();
+		// 	hrs = dte.getHours(); // retourne un entier allant de 0 à 23
+		// 	mns = dte.getMinutes(); // retourne un entier allantde 0 à 59
+		// 	sec = dte.getSeconds(); 
+		
+		// 	tm = ((hrs < 10)? "0" : "")+hrs+ ":";
+		// 	tm += ((mns < 10)? "0" : "")+mns+ ":";
+		// 	tm += ((sec < 10)? "0" : "")+sec;
+
+		// 	document.body.container.main.aside.hour.p= tm;
+		// 	setTimeout("afficherHeure()", 5);
+		// }
+
+
+		// DATE
+		function zedate() {
+			var date = new Date(),
+				day = date.getDate(),
+				month = date.getMonth() + 1, // les mois commencent à 0 en JavaScript
+				year = date.getFullYear();
+
+
+			if (day < 10) {
+			day = "0" + day;
+			}
+			if (month < 10) {
+			month = "0" + month;
+			}
+
+			document.getElementById("date-courrante").innerHTML = day + "/" + month + "/" + year;
+		}
+		setInterval(zedate, 1000);
+
+
+		// CHANGER ARRIERE PLAN
+		document.getElementById("bg1").addEventListener("click", function(){
+		document.body.style.backgroundImage = "url('img/pagne jig2.png')";
+		});
+
+		document.getElementById("bg2").addEventListener("click", function(){
+		document.body.style.backgroundImage = "url('img/cours.jpg')";
+		});
+
+
+		// audio de bienvenu
+		const audio = new Audio('audio/bienvenue.mp3');
+		audio.play();
+		
+		
+	</script>
+	</body>
+	
+</html>

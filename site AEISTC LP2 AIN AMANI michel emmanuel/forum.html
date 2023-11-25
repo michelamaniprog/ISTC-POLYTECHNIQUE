@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AEISTC (forum) </title>
+<link rel="stylesheet" href="style.css">
+<link rel="short icon" href="img/logo.jpg">
+<style>
+
+  nav ul li a.forum{
+    background-color: #39a9e3;
+    border-bottom: 3px solid#00aad5;
+  }
+  /* input{
+    text-transform: uppercase;
+  } */
+  textarea{
+    border-radius: 20px 0 50px 0 ;
+    background-image: url("img/background.jpg");
+    font-family: 'Times New Roman', Times, serif;
+    color: #0471a7;
+    box-shadow: -2px 4px 20px 6px rgba(0, 0, 0, .6) inset;
+  }
+
+  input:focus,
+		select:focus
+		{
+			outline: 1px solid red; 
+		}
+
+		.fond{ position: fixed; top: 0px; left: 0px; height: 100%; width: 100%; 
+		z-index: 1000; display: none; border: none; background-color: #000;
+		opacity: 0.50; filter : alpha(opacity=50);
+		}
+		.conteneur{ position: fixed; top: 25%; left: 25%; border: 3px outset #AAA;
+		width: 50%; display: none; z-index: 2000;
+		}
+		.titre{ background-color: rgb(184, 255, 170); color: #000000; font-weight: bold; 
+		font-size: 11pt; font-family: Arial; text-align: center; 
+		}
+		.contenu{ background-color: #428210; color: #000000; font-size: 11pt; 
+		font-family: "arial"; margin: 0px; padding: 20px; 
+		}
+
+
+		.cetr{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+</style>
+
+<script type="text/javascript">
+	
+
+
+	
+</script>
+</head>
+
+<body>
+	<div class="container">
+	<header>
+		<div class="box-bg_img">
+			<div class="change_bg-img-2" id="bg1"></div>
+			<div class="change_bg-img-1" id="bg2"></div>
+		</div>
+		<div class="bannier">
+			<div class="logo"></div>
+			<div id="boiteSlide">
+				 <ul id="slide">
+					<li><img src="img/DG.png" width="1279" height="200" alt="dg" /></li>
+				 	<li><img src="img/nouv/président0.png" width="1279" height="200" alt="pr" /></li>
+				 	<li><img src="img/nouv/foot0.png" width="1279" height="200" alt="foot" /></li>
+ 				 </ul>
+			</div>
+		</div>
+		
+		
+	</header>
+	<nav>
+		<ul id="BarreDeNavigation" class="barreNav">
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="#"  class="forum">Forum</a></li>
+			<li><a href="https://www.istcpolytechnique.ci/" target="_blank">ISTC</a></li>
+		</ul>
+	</nav>
+	<div class="box-info">
+		<div class="text-info">infos :</div>
+		<div class="mooving-text_info">
+			<marquee direction="left" class="marquee" scrollamount="1" truespeed="truespeed" behavior="scroll" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()"> 
+				la JIG(Journée de l'Infographiste) se tiendra le 22 fevrier 2023 a l'anphitheatre affoussiata bamba lamine
+			</marquee>  
+		</div>
+	</div>
+	<main>
+		<aside class="boite_gauche">
+			<div class="box-date_hour">
+				<div class="date">date
+					<p id="date-courrante"></p>
+				</div>
+				<div class="hour">heure
+					<p id="heure-courante" onload="afficherHeure()"></p>
+				</div>
+			</div>
+			<ul>
+				<li class="bloc1"><a href="#ancre_pr"> <img src="img/user-tie-solid.svg" class="icon" alt="presidente" width="20"> Président</a></li>
+                <li class="bloc2"><a href="#ancre_bu"><img src="img/people-group-solid.svg" class="icon" alt="bureau icon" width="20"> Presentation</a></li>
+				<li class="bloc3"><a href="#ancre_ac"><img src="img/message.svg" alt="activité" class="icon"  width="20"> Activités</a></li>
+			</ul>
+		</aside>
+		
+		<section class="section cetr">
+
+			<div id="lefond" class="fond"></div>
+			<div id="boite" class="conteneur">
+				<div class="titre">
+					Envoyer un message
+					<img src="img/fermer.jpg" height="16" style="float:right"  onclick="fermeBoite()"/>
+				</div>
+
+				<div class="contenu" name="contenu">
+					<form name="forum" action="#">
+						<label for="civilité">Civilité : </label>
+						<div class="box_civ">
+							<input type="radio" name="civ" value="Madame">Madame
+							<input type="radio" name="civ" value="Monsieur">Monsieur
+							<input type="radio" name="civ" value="Mademoiselle">Mademoiselle<br>
+						</div>
+							<input type="text" name="nom" placeholder="Votre Nom" size="60"><br>
+							<input type="text" name="prenom" placeholder="Votre prenom" size="60"><br>
+						<select name="age" id="">
+							<option selected="selected">Âge</option>
+							<option value="15 ans">15 ans</option>
+							<option value="16 ans">16 ans</option>
+							<option value="17 ans">17 ans</option>
+							<option value="18 ans">18 ans</option>
+							<option value="19 ans">19 ans</option>
+							<option value="20 ans">20 ans</option>
+						</select><br>
+
+						<div class="boite-annuler_envoi">
+							<input type="reset"  value="Annuler">
+							<!-- <input type="button"  value="envoyer"> -->
+							 <button class="envoi" onClick="return valider();">Envoyer</button>
+						</div>
+						</form>
+					 <button class="fermer" onclick="fermeBoite()"> Fermer </button>
+				</div>
+			</div>
+			<div>
+			<input type="button" value="Envoyer une information" onclick="ouvreBoite()" />
+			</div>
+
+
+
+		</section>
+	</main>
+	<footer class="silver">
+		<div class="nomwebmas">Webmaster Amani Michel</div> <hr>
+		<details>
+			<summary></summary>
+
+			<div class="about">
+				<div class="contener">
+					<img src="img/pp.jpg" alt="photo" class="principalimg">
+					
+					<div class="me">
+						<h1>Michel</h1>
+						<h1 class="bold">AMANI</h1>
+						<p class="slogan">“Curieux”</p>
+					</div>
+		
+					<div class="adresses">
+						<h3><a href="tel:[+225]0545475763" class="add_link"> +225 05 45 47 57 63</a> <img src="img/phone.png" alt="téléphone"></h3>
+						<h3><a href="https://accounts.google.com/signin/v2/challenge" class="add_link">Abidjan, cocody</a> <img src="img/GPS.png" alt="lieu"></h3>
+						<h3><a href="mailto:michelamani@gmail.com" class="add_link"> michelamaniprogm@gmail.com </a> <img src="img/email.png" alt="email"></h3>
+						<h3><a href="https://www.linkedin.com/" class="add_link">Michel Amani </a><img src="img/inlinked.png" alt="réseau"></h3>
+					</div>
+				</div>
+	
+				<h3 class="passion">Etudiant en communication, passionné du numérique. Je me forme en autodidacte au développement web depuis 2016.</h3>
+			</div>
+	
+	
+			<!-- debut section compétences -->
+			<section class="section-cv">
+				<h2>COMPETENCES</h2>
+				<div class="contenercomp">
+					<ul class="case1">
+						<li>Capacité d’analyse</li>
+						<li>Aptitudes à communiquer à l’oral et à l’écrit </li>
+						<li>Travail en équipe</li>
+					</ul>
+
+				</div>
+			</section>
+
+
+			<section class="section-cv">
+				<h2>LOGICIELS</h2>
+				<div class="contenercomp">
+					<div class="case3">
+						<ol class="int">
+							<li class="gras">Bureautique</li>
+							<ul >
+							<li> Excel</li>
+							<li> Powerpoint </li>
+							<li> Ms Project </li>
+							<li> Word</li>
+							</ul>
+							<li class="gras">PAO / MOTION</li>
+							<ul >
+							<li> Adobe Photoshop </li>
+							<li> Adobe Illustrator </li>
+							<li> Powerpoint </li>
+							<li> Adobe After effect </li>
+							<li> Adobe Premiere pro </li>
+							</ul>
+							<li class="gras">WEB</li>
+							<ul>
+							<li> Dreamweaver </li>
+							<li> Adobe Animate </li>
+							<li> Visual-code </li>
+							</ul>
+						</ol>
+					</div>
+				</div>
+			</section>
+	
+	
+			<!-- Debut section Formation et diplomes. -->
+			<section class="section-cv">
+				<h2>FORMATION ET CERTIFICATS </h2>
+				<ul class="forma">
+					<li>Formation Cisco (théorique) introduction à la cybersécurité [2021] </li> 
+					<li> Formation Alphorm PHP et MySQL [2020] </li>
+					<li>Formation pirple.com html5 et Css3 [2021] </li> 
+					<li>Licence en Sciences de la communication [2018] </li> 
+					<li> Baccalauréat A2 [2015]. </li>
+				</ul>
+	
+			</section>
+	
+	
+			<!-- debut section expérience pro -->
+			<section class="section-cv">
+				<h2>EXPERIENCE PROFESIONNELLE </h2>
+	
+				<h3 class="date0">Février 2018-2020 : Community Manager du Club Etudiants pour 
+								l’UNESCO de l’université de Bouaké</h3>
+								<ul class="expre">
+									<li>Animation, publication et conception, Veille informationnelle, Formateur des 
+										membres du bureau à la maitrise de l’outil informatique (ordinateur). </li>
+								</ul>
+			   <h3 class="date1">Avril 2016 – 2018 : Gestionnaire de cybercafé kami (Yamoussoukro)</h3>
+								<ul class="exp">
+									<li>Traitement de texte, Elaboration de devis avec Excel, Installation et mise en 
+										place réseau Pancafé, Recherche et navigation. </li>
+								</ul>
+			</section>
+	
+	
+			<!-- debut section centre d'interets -->
+			<section class="section-cv">
+				<h2>CENTRES D’INTÉRÊT </h2>
+					<ul class="int">
+						<li> Lecture </li>
+						<li> Recherche </li>
+						<li> Jeux video </li>
+						<li> Concours de programmation</li>
+					</ul>
+			</section>
+
+
+			<!-- debut section langues -->
+			<section class="section-cv">
+				<h2>Langues </h2>		
+					<div class="case2">
+	
+						<div class="flex1">
+							<h3>Français</h3>
+							 <span>80%</span>
+						</div>
+						<div class="bar1">
+						</div>
+	
+						<div class="flex2">
+							<h3>Anglais</h3>
+							<span>60%</span>
+						</div>
+						<div class="bar2"></div>
+					</div>
+			</section>
+	
+	
+			<!-- debut section centre d'interets -->
+			 <section class="section-cv">
+				<h2>REFERENCES</h2>
+					<ul class="ref">
+					  <li>Président Club UNESCO Bouaké : M. Goulei Yves .L; 07 49 30 41 09 </li>
+					  <li>Patron cyber-Kami: M. Amani Brou; 07 07 72 29 19 </li>
+					</ul>
+			</section>
+	
+			<div class="pied-cv_pdf">
+				<a href="CV.pdf" target="">Téléchager mon CV</a>
+			</div>
+			
+		</details>
+	</footer>
+</div>
+
+
+<script type="text/javascript">
+
+		
+		//focus
+		// document.getElementById('focusmeplease').focus();
+
+		//HEURE
+        function heure() {
+            var date = new Date(),
+                hours = date.getHours(),
+                minutes = date.getMinutes(),
+                seconds = date.getSeconds();
+
+
+			// 	tm = ((hours < 10)? "0" : "")+hours+ ":";
+			// 	tm += ((minutes < 10)? "0" : "")+minutes+ ":";
+			// 	tm += ((seconds < 10)? "0" : "")+seconds;
+
+            if (hours < 10) {
+            hours = "0" + hours;
+            }
+            if (minutes < 10) {
+            minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+            seconds = "0" + seconds;
+            }
+
+            document.getElementById("heure-courante").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        setInterval(heure, 1000);
+
+
+		// function afficherHeure(){
+		// 	var dte = new Date();
+		// 	hrs = dte.getHours(); // retourne un entier allant de 0 à 23
+		// 	mns = dte.getMinutes(); // retourne un entier allantde 0 à 59
+		// 	sec = dte.getSeconds(); 
+		
+		// 	tm = ((hrs < 10)? "0" : "")+hrs+ ":";
+		// 	tm += ((mns < 10)? "0" : "")+mns+ ":";
+		// 	tm += ((sec < 10)? "0" : "")+sec;
+
+		// 	document.body.container.main.aside.hour.p= tm;
+		// 	setTimeout("afficherHeure()", 5);
+		// }
+
+
+		// DATE
+		function zedate() {
+			var date = new Date(),
+				day = date.getDate(),
+				month = date.getMonth() + 1, // les mois commencent à 0 en JavaScript
+				year = date.getFullYear();
+
+
+			if (day < 10) {
+			day = "0" + day;
+			}
+			if (month < 10) {
+			month = "0" + month;
+			}
+
+			document.getElementById("date-courrante").innerHTML = day + "/" + month + "/" + year;
+		}
+		setInterval(zedate, 1000);
+
+
+		// CHANGER ARRIERE PLAN
+		document.getElementById("bg1").addEventListener("click", function(){
+		document.body.style.backgroundImage = "url('img/pagne jig2.png')";
+		});
+
+		document.getElementById("bg2").addEventListener("click", function(){
+		document.body.style.backgroundImage = "url('img/cours.jpg')";
+		});
+
+
+
+		// RESTRICTION FORMULAIRE
+	// function valider(){
+	// 	// document.getElementById("btn-valider").addEventListener("click", function(){
+	// 	if(document.forum.civ_cib.boite-civilite.RadioInputCiv.civ[0].checked==false && 
+	// 		document.forum.civ_cib.boite-civilite.RadioInputCiv.civ[1].checked==false && 
+	// 		document.forum.civ_cib.boite-civilite.RadioInputCiv.civ[2].checked==false)
+	// 		{
+	// 		window.alert("veillez sélectionner votre civilité SVP !");
+	// 	}
+	// }
+	// popup
+	function ouvreBoite() {
+	document.getElementById("boite").style.display = "block";
+	document.getElementById("lefond").style.display = "block";
+	} 
+	function fermeBoite() {
+	document.getElementById("boite").style.display = "none";
+	document.getElementById("lefond").style.display = "none";
+	} 
+
+
+	function valider(){
+	if(document.forum.civ[0].checked==false && 
+	   document.forum.civ[1].checked==false &&
+	   document.forum.civ[2].checked==false){
+ 	   window.alert("veillez sélectionner votre civilité SVP !");
+	   document.forum.civ[0].focus();
+	   return false;
+	}
+	if(document.forum.nom.value==""){
+		window.alert("veuillez saisir votre nom SVP !");
+		document.forum.nom.focus();
+		return false
+	}
+	if(document.forum.prenom.value==""){
+		window.alert("veuillez saisir votre prenom SVP !");
+		document.forum.prenom.focus();
+		return false
+	}
+	if(document.forum.age.selectedIndex==0){
+		window.alert("veillez selectionner votre age SVP !");
+		document.forum.age.focus();
+		return false;
+	}	
+}
+
+</script>
+</body>
+	
+</html>
