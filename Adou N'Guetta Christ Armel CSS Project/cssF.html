@@ -1,0 +1,233 @@
+<! DOCTYPE HTML PUBLIC '-// W3C// DTD HTML 4.01 Transitional//EN""http://www.w3c.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Forum CSS</title>
+      <meta http-equiv="Content-Style-Type" content="text/css">
+      <style type="text/css" media="screen">
+         #barreMenu a:link, #barreMenu a:visited{
+
+	                   width:100px;
+		margin:5px 0px;
+		padding:3px;
+		border-right:3px dotted white;
+		border-bottom:3px dotted white;
+		border-top:3px dotted white;
+		border-left:3px dotted white;
+		background-color:purple;
+		color:white;
+
+		}
+         #barreMenu a:hover{
+
+	                   width:100px;
+		margin:5px 0px;
+		padding:3px;
+		border-right:3px solid purple;
+		border-bottom:3px solid purple;
+		border-top:3px solid purple;
+		border-left:3px solid purple;
+		background-color:purple;
+		color:white;
+
+		}
+         #barreMenu a:active{
+
+	                   width:100px;
+		margin:5px 0px;
+		padding:3px;
+		border-right:3px solid white;
+		border-bottom:3px solid white;
+		border-top:3px solid white;
+		border-left:3px solid white;
+		background-color:purple;
+		color:white;
+
+		}
+           .dv1{position:absolute;
+	         left:50px; top:20px;
+	         width:120px; height:50px;
+	         padding:4px;
+	         border:2px dashed purple;
+	         background-color:white;	
+	         z-index:1}
+           .dv2{position:absolute;
+	         left:75px; top:50px;
+	         width:120px; height:50px;
+	         padding:4px;
+	         border:2px dashed purple;
+	         background-color:white;	
+	         z-index:1}
+           .dv3{position:absolute;
+	         left:100px; top:80px;
+	         width:120px; height:50px;
+	         padding:4px;
+	         border:2px dashed purple;
+	         background-color:white;	
+	         z-index:1}
+          div:hover{z-index:10;}
+      </style>
+   </head>
+
+      <div style="width:78%; height:100px; float:left; position:fixed; background-color:#cbb2fe; right:18px; z-index:10000000:">      
+        <ul style=" list-style-type:none; text-align:center;" id="barreMenu">
+            <li style="display:inline;  margin-right:200px"><a href="cssA.html" style="text-decoration:none;">Accueil</a></li>
+            <li style="display:inline;  margin-right:200px"><a href="#" style="text-decoration:none;">Forum</a></li>
+            <li style="display:inline;  margin-right:20px"><a href="https://www.istcpolytechnique.ci/" target="_blanK" style="text-decoration:none;">ISTC</a></li>
+         </ul>
+      </div>
+
+   <body style="background-image:url('images/degrade.png'); background-attachment:fixed;">
+      <div style="width:20%; float:left; position:fixed;">
+ <img width="100%" height="100px" src="images/aelogo.png">
+      </div>
+
+      <div style="width:20%; height:495px; float:left; position:absolute; top:110px; position:fixed;">
+         <div class="dv1">
+            <ul style="list-style-image:url('images/puceperso.png');">
+               <a href="cssA.html #pre" style="text-decoration:none; color:purple;"><li>President</li></a>
+            </ul>
+         </div>
+         <div class="dv2">
+            <ul style="list-style-image:url('images/puceperso.png');">
+               <a href="cssA.html #bur" style="text-decoration:none; color:purple;"><li>Bureau</li></a>
+            </ul>
+         </div>
+         <div class="dv3">
+            <ul style="list-style-image:url('images/puceperso.png');">
+               <a href="cssA.html #act" style="text-decoration:none; color:purple;"><li>Activité</li></a>
+            </ul>
+         </div>
+      </div>
+      <div style="width:77%; height:495px; float:left; position:absolute; top:110px; right:33px;">
+
+   <fieldset style="border:2px dashed purple">
+      <legend><b>Forum</b></legend>
+            <div align="right" style="float:left; width:50%; background-color:#cbb2fe;"><b>Civilité :</b></div>
+            <div style="float:left; width:50%; background-color:#cbb2fe;"><input type="radio" name="civ" value="Madame">Madame
+                     <input type="radio" name="civ" value="Monsieur">Monsieur
+                     <input type="radio" name="civ" value="Mademoiselle">Madamoiselle</div>
+            <div align="right" style="float:left; width:50%;"><b> Nom :</b></div>
+            <div style="float:left; width:50%;"><input type="text" name="nom" size="40"></div>
+            <div align="right" style="float:left; width:50%; background-color:#cbb2fe;"><b>Prénoms :</b></div>
+            <div style="float:left; width:50%; background-color:#cbb2fe;"><input type="text" name="prenom" size="40"></div>
+            <div align="right" style="float:left; width:50%;"><b>Date de naissance :<b></div>
+            <div style="float:left; width:50%;"><select name="journaiss">
+                                            <option selected="selected">Jour</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24 </option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>  
+                                            <option value="31">31</option>
+                                         </select>
+                                         <select name="moisnaiss">
+                                            <option selected="selected">Mois</option>
+                                            <option value="Janvier">Janvier</option>
+                                            <option value="Février">Février</option>
+                                            <option value="Mars">Mars</option>
+                                            <option value="Avril">Avril</option>
+                                            <option value="Mai">Mai</option>
+                                            <option value="Juin">Juin</option>
+                                            <option value="Juillet">Juillet</option>
+                                            <option value="Août">Août</option>
+                                            <option value="Septembre">Septembre</option>
+                                            <option value="Octobre">Octobre</option>
+                                            <option value="Novembre">Novembre</option>
+                                            <option value="Décembre">Décembre</option>
+                                         </select>
+                                         <select name="annéenaiss">
+                                            <option selected="selected">Année</option>
+                                            <option value="1980">1980</option>
+                                            <option value="1981">1981</option>
+                                            <option value="1982">1982</option>
+                                            <option value="1983">1983</option>
+                                            <option value="1984">1984</option>
+                                            <option value="1985">1985</option>
+                                            <option value="1986">1986</option>
+                                            <option value="1987">1987</option>
+                                            <option value="1988">1988</option>
+                                            <option value="1989">1989</option>
+                                            <option value="1990">1990</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1992">1992</option>
+                                            <option value="1993">1993</option>
+                                            <option value="1994">1994</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1999">1999</option>
+                                            <option value="2000">2000</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                         </select></div>
+            <div align="right" style="float:left; width:50%; background-color:#cbb2fe;"><b> Mots de Passe</b></div>
+            <div style="float:left; width:50%; background-color:#cbb2fe;"><input type="password" name="MotP" size="40"></div>
+            <div align="right" style="float:left; width:50%;"><b>Photographie :</b></div>
+            <div style="float:left; width:50%;"><input type="file" name="file" size="35"></div>
+            <div align="right" style="float:left; width:50%; background-color:#cbb2fe; vertical-align:middle; height:60px;"><b>Cible :</b></div>
+            <div style="float:left; width:50%; background-color:#cbb2fe;"><input type="checkbox" name="cible" value="Etudiant">Etudiant<br>
+                  <input type="checkbox" name="cible" value="Professeur">Professeur<br>
+                  <input type="checkbox" name="cible" value="Administrateur">Administrateur<br></td>
+            </div>
+            <div align="right" style="float:left; width:50%;"><b>Question :</b></div>
+            <div style="float:left; width:50%;"><textarea cols="50" rows="5">Posez vos quetions</textarea><br><input type="reset" name="reset" value="Annuler" size="35"><input type="submit" name="submit" value="Envoyer" size="35"><br></div>
+   </fieldset>
+
+     </div>
+
+
+      <div style="width:100%; float:left; position:absolute; top:590px;">
+                     <b>WebMaster:</b>
+                      <a href="mailto:armellife54@gmail.com" style="text-decoration:none; color:purple; font-weight:bold">
+                          Adou N'guetta Christ Armel
+                      </a>
+
+      </div>
+   </body>
+</html>
